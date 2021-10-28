@@ -7,13 +7,28 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh !important;
   background-color: $body-bg;
 }
 
 main {
-  flex-grow: 1;
+  flex-grow: 1 !important;
 }
 
+.poke-scroll {
+  height: 30vh;
+  overflow-y: scroll;
+}
 
-
+.marginstats{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.height{
+  min-height: .5em;
+  background-color: rgb(141, 141, 141) ;
+}
+.borders {
+  border-color: rgb(141, 141, 141) !important;
+  border-width: .5em !important;
+}

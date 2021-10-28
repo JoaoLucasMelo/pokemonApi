@@ -14,52 +14,65 @@
   <title>pokemonApi</title>
 </head>
 
-<body>
+<body class="bg-danger">
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">pokemonApi</span>
-      </a>
+    <nav class="navbar navbar-dark navbar-expand bg-dark justify-content-center text-light no-select">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"
+        height="70" alt="" loading="lazy">
     </nav>
+    <div class=" height"></div>
   </header>
   <main>
     <div class="container-fluid">
+
       <div class="row">
-        <div class="col-5">
+        <div class="col-md-3">
           <div>
-            <div class="card">
+            <div class="card borders bg-light mt-2">
               <div class="card-body">
                 <h4 class="card-title">Choose Pokemon</h4>
-                <div id="pokemonsList"></div>
+                <div class=" poke-scroll" id="pokemonsList"></div>
               </div>
             </div>
           </div>
           <div>
-            <div class="card">
+            <div class="card borders bg-light mt-2">
               <div class="card-body">
                 <h4 class="card-title">Your Pokemons</h4>
+                <div class=" poke-scroll" id="myPokemonsList"></div>
               </div>
             </div>
           </div>
-
         </div>
-        <div class="col-7">
-          <div class="card">
-            <img class="card-img-top" src="" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Pokemon</h4>
-              <div id="pokecenter"></div>
+        <div id="pokecenter" class="col-md-9">
+          <!-- <div class="marginstats borders card bg-light">
+            <div class="card-body d-flex justify-content-evenly flex-row h-100">
+              <div>
+                <h1 class="marginstats card-title text-center">Pokemon</h1>
+                <div>
+                  <h3>Pokédex number: </h3>
+                  <h3>Abilities: </h3>
+                  <h3>Type: </h3>
+                  <h3>Weight: </h3>
+                  <h3>Height: </h3>
+                </div>
+              </div>
+              <div class="">
+                <img width="500px"
+                  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+                  alt="">
+              </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
   </main>
+  <div class=" height"></div>
   <footer class="bg-dark text-light">
     <div class="text-center no-select">
-      <p><small>Made with 💖 by Codeworks</small></p>
+      <p><small>Made with ❤ by John Melo | Codeworks</small></p>
     </div>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>
