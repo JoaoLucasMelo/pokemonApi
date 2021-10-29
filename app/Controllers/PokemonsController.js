@@ -17,7 +17,10 @@ if (ProxyState.activePokemon){
 function _drawMyPokemons(){
   const poke = ProxyState.myPokemons
   let template = ''
-  poke.forEach(p=> template += `<p class="selectable" onclick="app.pokemonsController.setPokemonActive('${p.name}')">${p.name}</p>`)
+  poke.forEach(p=> {template += `<p class="selectable" onclick="app.pokemonsController.setPokemonActive('${p.id}')">${p.name}</p>`})
+  if (!template) {
+    template = '<p class="text-grey darken-20"> You have no pokemon</p>'
+  }
   document.getElementById('myPokemonsList').innerHTML = template
 }
 
@@ -29,7 +32,7 @@ constructor(){
   ProxyState.on('activePokemon',_drawActivePokemon)
   ProxyState.on('myPokemons',_drawMyPokemons)
   this.getAllPokemons()
-// this.getAllPokemonsPages()
+  this.getMyPokemons()
 }
 async getAllPokemons(){
   try {
@@ -46,16 +49,17 @@ async getMyPokemons(){
   }
 }
 
-async addPokemon(){
+async addPokemon(name){
+ 
   try {
-    pokemonsService.addPokemon()
+    await pokemonsService.addPokemon(name)
   } catch (error) {
     console.error("[POKE API Error]", error)
   }
 }
 
- async setPokemonActive(name){
-  await pokemonsService.setPokemonActive(name)
+ async setPokemonActive(id){
+  await pokemonsService.setPokemonActive(id)
 }
 
 
